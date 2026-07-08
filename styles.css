@@ -82,8 +82,9 @@ img { max-width: 100%; display: block; }
   padding: 0.9rem 3rem;
   border-bottom: 1px solid rgba(39, 54, 23, 0.08);
 }
-.nav-logo svg { transition: transform 0.4s var(--ease); }
-.nav-logo:hover svg { transform: rotate(-6deg) scale(1.05); }
+.nav-logo svg, .nav-logo-img { transition: transform 0.4s var(--ease); }
+.nav-logo-img { height: 40px; width: auto; display: block; }
+.nav-logo:hover svg, .nav-logo:hover .nav-logo-img { transform: rotate(-6deg) scale(1.05); }
 .nav-links { display: flex; align-items: center; gap: 2.5rem; list-style: none; }
 .nav-links a {
   font-size: 0.7rem; font-weight: 600; letter-spacing: 0.16em;
