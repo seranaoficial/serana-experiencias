@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#273617" />
+  <title>Serana · Experiencias de Bienestar a tu Medida</title>
+  <meta name="description" content="Diseñamos experiencias de bienestar transformadoras: retiros, eventos corporativos, días de conexión y rituales privados en Medellín y Oriente Antioqueño." />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Serana Experiencias — Bienestar a tu Medida" />
+  <meta property="og:description" content="Yoga, ice bath, fire walking, sonoterapia y coaching. Diseñamos cada experiencia desde lo que tú o tu equipo necesitan." />
+  <meta property="og:image" content="https://serana.social/og-image.jpg" />
+  <meta property="og:url" content="https://serana.social" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <!-- Cursor personalizado -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- Navegación -->
+  <nav class="nav" id="nav">
+    <a href="#top" class="nav-logo" aria-label="Serana Inicio">
+      <svg viewBox="0 0 56 56" width="36" height="36" aria-hidden="true">
+        <rect width="56" height="56" rx="12" fill="#273617"/>
+        <g fill="none" stroke="#FEFADF" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M28 7 C 12 14, 10 30, 28 49 C 46 30, 44 14, 28 7 Z"/>
+          <path d="M28 7 L 28 49" stroke-width="1.4" opacity="0.5"/>
+          <path d="M16 22 C 22 22, 26 28, 28 35" opacity="0.7"/>
+          <path d="M40 22 C 34 22, 30 28, 28 35" opacity="0.7"/>
+        </g>
+        <circle cx="28" cy="38" r="2.6" fill="#BC6C25"/>
+      </svg>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#filosofia">FILOSOFÍA</a></li>
+      <li><a href="#lineas">LÍNEAS</a></li>
+      <li><a href="#herramientas">HERRAMIENTAS</a></li>
+      <li><a href="#formato">FORMATO</a></li>
+      <li><a href="#quiz" class="nav-cta">DESCUBRE LA TUYA</a></li>
+    </ul>
+    <button class="nav-burger" id="navBurger" aria-label="Menú">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-bg">
+        <div class="hero-orb hero-orb-1"></div>
+        <div class="hero-orb hero-orb-2"></div>
+        <div class="hero-orb hero-orb-3"></div>
+      </div>
+      <div class="hero-content reveal">
+        <p class="hero-eyebrow">EXPERIENCIAS SERANA</p>
+        <h1 class="hero-title">
+          El bienestar<br/>
+          <span class="hero-title-italic">se vive,</span><br/>
+          no se explica.
+        </h1>
+        <p class="hero-sub">
+          Diseñamos experiencias de alto impacto para personas y equipos que entienden
+          que cuidar el cuerpo, la mente y las emociones no es un lujo: es el camino.
+        </p>
+        <div class="hero-cta">
+          <a href="#quiz" class="btn btn-primary">Descubre tu experiencia →</a>
+          <a href="#lineas" class="btn btn-ghost">Ver líneas</a>
+        </div>
+        <div class="hero-tags">
+          <span>100% DISEÑADO A TU MEDIDA</span>
+          <span>•</span>
+          <span>ORIENTE ANTIOQUEÑO</span>
+          <span>•</span>
+          <span>DESDE 2024</span>
+        </div>
+      </div>
+      <div class="hero-scroll">
+        <span>SCROLL</span>
+        <div class="hero-scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- FILOSOFÍA -->
+    <section class="section section-cream" id="filosofia">
+      <div class="section-inner">
+        <p class="section-eyebrow reveal">NUESTRA FILOSOFÍA</p>
+        <h2 class="section-title reveal">
+          Cada experiencia<br/>
+          <em>nace de una pregunta:</em><br/>
+          <span class="text-olive">¿qué necesitas sentir?</span>
+        </h2>
+        <div class="filosofia-grid">
+          <article class="filosofia-card reveal">
+            <div class="filosofia-num">/ 01</div>
+            <h3>No es fórmula, es diseño</h3>
+            <p>Cada experiencia se construye desde tus objetivos. Escuchamos antes de proponer. Acompañamos durante y después.</p>
+          </article>
+          <article class="filosofia-card reveal">
+            <div class="filosofia-num">/ 02</div>
+            <h3>Cuerpo, mente y entorno</h3>
+            <p>Combinamos prácticas que activan el cuerpo, calman la mente y abren el entorno. La transformación es integral o no es.</p>
+          </article>
+          <article class="filosofia-card reveal">
+            <div class="filosofia-num">/ 03</div>
+            <h3>Espacios con sentido</h3>
+            <p>Trabajamos en lugares que respiran naturaleza y silencio. La geografía es parte del ritual.</p>
+          </article>
+          <article class="filosofia-card reveal">
+            <div class="filosofia-num">/ 04</div>
+            <h3>Equipos que confían</h3>
+            <p>Contamos con coaches, facilitadores y guías certificados. El talento es nuestra base, el cuidado nuestro sello.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- LÍNEAS DE EXPERIENCIA -->
+    <section class="section section-forest" id="lineas">
+      <div class="section-inner">
+        <p class="section-eyebrow eyebrow-light reveal">5 LÍNEAS · UN MISMO PROPÓSITO</p>
+        <h2 class="section-title title-light reveal">
+          Una experiencia<br/>
+          <em>para cada momento</em><br/>
+          <span class="text-ochre">de tu vida</span>
+        </h2>
+
+        <div class="lineas-grid">
+          <article class="linea-card reveal" data-linea="corporativa">
+            <div class="linea-num">L01</div>
+            <h3>Corporativa</h3>
+            <p>Para equipos que quieren reconectar, alinearse y volver a confiar. Day retreats, team building con propósito, wellness days.</p>
+            <span class="linea-link">Explorar →</span>
+          </article>
+          <article class="linea-card reveal" data-linea="privada">
+            <div class="linea-num">L02</div>
+            <h3>Privada</h3>
+            <p>Para ti y quienes importan. Cumpleaños, aniversarios, rituales de pareja, despedidas, momentos que merecen pausa.</p>
+            <span class="linea-link">Explorar →</span>
+          </article>
+          <article class="linea-card reveal" data-linea="hoteles">
+            <div class="linea-num">L03</div>
+            <h3>Hoteles</h3>
+            <p>Programas de bienestar para huéspedes. Yoga al amanecer, ice bath, menús conscientes. Diferénciate en hospitalidad.</p>
+            <span class="linea-link">Explorar →</span>
+          </article>
+          <article class="linea-card reveal" data-linea="naturaleza">
+            <div class="linea-num">L04</div>
+            <h3>Naturaleza</h3>
+            <p>Retiros en Oriente Antioqueño. Senderos, baños de río, fogatas, silencio. Reconecta con lo esencial.</p>
+            <span class="linea-link">Explorar →</span>
+          </article>
+          <article class="linea-card reveal" data-linea="alto-impacto">
+            <div class="linea-num">L05</div>
+            <h3>Alto impacto</h3>
+            <p>Fire walking, ice bath, sonoterapia, breathwork. Prácticas que rompen el piloto automático y despiertan.</p>
+            <span class="linea-link">Explorar →</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- HERRAMIENTAS -->
+    <section class="section section-cream" id="herramientas">
+      <div class="section-inner">
+        <p class="section-eyebrow reveal">CÓMO LO HACEMOS</p>
+        <h2 class="section-title reveal">
+          4 categorías<br/>
+          <em>para activar</em><br/>
+          <span class="text-olive">cuerpo y mente</span>
+        </h2>
+
+        <div class="herramientas-grid">
+          <details class="herramienta" open>
+            <summary>
+              <span class="herramienta-icon">●</span>
+              <span class="herramienta-title">Movimiento consciente</span>
+              <span class="herramienta-arrow">+</span>
+            </summary>
+            <ul>
+              <li>Yoga al amanecer</li>
+              <li>Yoga terapéutico</li>
+              <li>Movilidad y respiración</li>
+              <li>Caminatas meditativas</li>
+              <li>Estiramientos guiados</li>
+            </ul>
+          </details>
+          <details class="herramienta">
+            <summary>
+              <span class="herramienta-icon">●</span>
+              <span class="herramienta-title">Alto impacto</span>
+              <span class="herramienta-arrow">+</span>
+            </summary>
+            <ul>
+              <li>Ice bath / inmersión en frío</li>
+              <li>Fire walking</li>
+              <li>Breathwork avanzado</li>
+              <li>Sauna + contraste</li>
+            </ul>
+          </details>
+          <details class="herramienta">
+            <summary>
+              <span class="herramienta-icon">●</span>
+              <span class="herramienta-title">Mente y sonido</span>
+              <span class="herramienta-arrow">+</span>
+            </summary>
+            <ul>
+              <li>Sonoterapia con cuencos</li>
+              <li>Meditación guiada</li>
+              <li>Journaling</li>
+              <li>Coaching individual y grupal</li>
+            </ul>
+          </details>
+          <details class="herramienta">
+            <summary>
+              <span class="herramienta-icon">●</span>
+              <span class="herramienta-title">Gastronomía consciente</span>
+              <span class="herramienta-arrow">+</span>
+            </summary>
+            <ul>
+              <li>Catering plant-based</li>
+              <li>Desayunos rituales</li>
+              <li>Cenas de fuego</li>
+              <li>Catación de jugos funcionales</li>
+            </ul>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- FORMATO -->
+    <section class="section section-olive" id="formato">
+      <div class="section-inner">
+        <p class="section-eyebrow eyebrow-light reveal">DURACIÓN</p>
+        <h2 class="section-title title-light reveal">
+          Desde 1 hora<br/>
+          <em>hasta un retiro completo</em>
+        </h2>
+        <div class="formato-grid">
+          <div class="formato-card reveal">
+            <div class="formato-time">1–2h</div>
+            <h3>Sesión express</h3>
+            <p>Una práctica puntual: yoga, ice bath, breathwork. Ideal para pausas en la semana o previas a reuniones clave.</p>
+          </div>
+          <div class="formato-card reveal">
+            <div class="formato-time">½ día</div>
+            <h3>Inmersión matinal o vespertina</h3>
+            <p>Combinación de 2 a 3 herramientas. Desayuno o cena consciente incluida. Para grupos pequeños o individuales.</p>
+          </div>
+          <div class="formato-card reveal">
+            <div class="formato-time">1 día</div>
+            <h3>Day retreat</h3>
+            <p>Programa completo de 6 a 8 horas. Salida de ciudad, naturaleza, gastronomía, prácticas. Lo más pedido para equipos.</p>
+          </div>
+          <div class="formato-card reveal">
+            <div class="formato-time">2+ días</div>
+            <h3>Retiro completo</h3>
+            <p>Estadía, todas las comidas, programa diseñado a medida. Para transformaciones profundas o hitos de vida.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUIZ INTERACTIVO -->
+    <section class="section section-cream section-quiz" id="quiz">
+      <div class="section-inner">
+        <p class="section-eyebrow reveal">DESCUBRE TU EXPERIENCIA</p>
+        <h2 class="section-title reveal">
+          60 segundos.<br/>
+          <em>Una experiencia</em><br/>
+          <span class="text-olive">diseñada para ti.</span>
+        </h2>
+        <p class="section-sub reveal">4 preguntas para que te recomendemos la combinación que mejor resuena con lo que necesitas ahora.</p>
+
+        <div class="quiz-card reveal" id="quizCard">
+          <div class="quiz-progress">
+            <div class="quiz-progress-bar" id="quizBar"></div>
+            <div class="quiz-progress-text">
+              <span id="quizStep">1</span> / <span id="quizTotal">4</span>
+            </div>
+          </div>
+
+          <div class="quiz-stage" id="quizStage">
+            <!-- Las preguntas se inyectan vía JS -->
+          </div>
+
+          <div class="quiz-result" id="quizResult" hidden>
+            <p class="quiz-result-eyebrow">TU EXPERIENCIA IDEAL</p>
+            <h3 class="quiz-result-title" id="resultTitle"></h3>
+            <p class="quiz-result-desc" id="resultDesc"></p>
+            <div class="quiz-result-actions">
+              <a href="#contacto" class="btn btn-primary">Cotizar esta experiencia →</a>
+              <button class="btn btn-ghost" id="quizRestart">Repetir quiz</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EJEMPLOS -->
+    <section class="section section-forest" id="ejemplos">
+      <div class="section-inner">
+        <p class="section-eyebrow eyebrow-light reveal">EJEMPLOS REALES</p>
+        <h2 class="section-title title-light reveal">
+          Así se ve<br/>
+          <em>una experiencia Serana</em>
+        </h2>
+        <div class="ejemplos-grid">
+          <article class="ejemplo reveal">
+            <div class="ejemplo-img ejemplo-img-1"></div>
+            <h3>Reset Corporativo</h3>
+            <p>Para un equipo de 12 personas en medio del cierre de año. Día completo en Oriente: yoga, ice bath, fogata y coaching sobre descanso y enfoque. Salieron diferentes.</p>
+          </article>
+          <article class="ejemplo reveal">
+            <div class="ejemplo-img ejemplo-img-2"></div>
+            <h3>Ritual de Pareja</h3>
+            <p>Aniversario en medio de la rutina. Tarde de breathwork, cena consciente, sonoterapia privada. Reconectar desde el cuerpo, no desde la pantalla.</p>
+          </article>
+          <article class="ejemplo reveal">
+            <div class="ejemplo-img ejemplo-img-3"></div>
+            <h3>Hielo y Fuego</h3>
+            <p>Sesión express para un grupo de amigos. Ice bath + fire walking en una tarde. Develar que el cuerpo puede mucho más de lo que la mente cree.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTO / CTA FINAL -->
+    <section class="section section-cream section-contacto" id="contacto">
+      <div class="section-inner">
+        <p class="section-eyebrow reveal">DISEÑEMOS TU EXPERIENCIA</p>
+        <h2 class="section-title reveal">
+          Cuéntanos<br/>
+          <em>qué necesitas sentir</em>
+        </h2>
+        <p class="section-sub reveal">Te respondemos en menos de 24h con una propuesta inicial. Sin compromiso.</p>
+
+        <form class="form reveal" id="contactForm" novalidate>
+          <div class="form-row">
+            <div class="form-field">
+              <label for="nombre">Nombre</label>
+              <input type="text" id="nombre" name="nombre" required placeholder="¿Cómo te llamas?" />
+            </div>
+            <div class="form-field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required placeholder="tu@correo.com" />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-field">
+              <label for="telefono">WhatsApp</label>
+              <input type="tel" id="telefono" name="telefono" placeholder="+57 300 000 0000" />
+            </div>
+            <div class="form-field">
+              <label for="modalidad">Modalidad</label>
+              <select id="modalidad" name="modalidad">
+                <option value="">— Elige una —</option>
+                <option>Individual</option>
+                <option>Pareja / grupo pequeño</option>
+                <option>Corporativo</option>
+                <option>Hotel / aliado</option>
+                <option>Retiro completo</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-field">
+            <label for="mensaje">Cuéntanos un poco</label>
+            <textarea id="mensaje" name="mensaje" rows="4" placeholder="¿Cuándo lo imaginas? ¿Para cuántas personas? ¿Qué te gustaría que sucediera?"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-large" id="submitBtn">
+            Enviar y recibir propuesta →
+          </button>
+          <p class="form-status" id="formStatus"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <p class="footer-mark">SERANA</p>
+        <p class="footer-tag">Alimentación y experiencias conscientes · Medellín · Oriente Antioqueño</p>
+      </div>
+      <div class="footer-links">
+        <a href="https://serana.food">Tienda</a>
+        <a href="https://instagram.com/serana.food">Instagram</a>
+        <a href="mailto:hola@serana.social">hola@serana.social</a>
+      </div>
+      <p class="footer-copy">© 2026 Serana · Diseñado y construido con intención</p>
+    </div>
+  </footer>
+
+  <script src="/app.js"></script>
+</body>
+</html>
