@@ -176,11 +176,6 @@ img { max-width: 100%; display: block; }
   color: rgba(39, 54, 23, 0.85);
 }
 .hero-cta { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 3rem; }
-.hero-tags {
-  display: flex; gap: 1.2rem; justify-content: center; flex-wrap: wrap;
-  font-size: 0.7rem; font-weight: 600; letter-spacing: 0.2em;
-  color: var(--serana-olive); opacity: 0.7;
-}
 .hero-scroll {
   position: absolute; bottom: 2.5rem; left: 50%; transform: translateX(-50%);
   display: flex; flex-direction: column; align-items: center; gap: 0.6rem;
