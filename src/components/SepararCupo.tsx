@@ -25,6 +25,9 @@ export default function SepararCupo() {
     "idle",
   );
   const [pagoUrl, setPagoUrl] = useState<string | null>(null);
+  const [pagoEstado, setPagoEstado] = useState<"idle" | "cargando" | "proximo">(
+    "idle",
+  );
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -46,7 +49,7 @@ export default function SepararCupo() {
       },
     });
 
-    // 2. Si hay precio y token MP, intentar crear preferencia de pago
+    // 2. Si hay precio, intentar crear preferencia de pago
     if (servicio.precio && leadId) {
       try {
         const res = await fetch("/api/mp/preference", {
@@ -70,6 +73,14 @@ export default function SepararCupo() {
     }
 
     setEstado("exito");
+  };
+
+  const handlePagar = () => {
+    if (pagoUrl) {
+      window.open(pagoUrl, "_blank", "noopener,noreferrer");
+    } else {
+      setPagoEstado("proximo");
+    }
   };
 
   return (
@@ -102,7 +113,16 @@ export default function SepararCupo() {
                 {tours.map((t) => (
                   <button
                     key={t.id}
-                    onClick={() => setServicio({ id: t.id, nombre: t.nombre, precio: t.precio, precioLabel: t.precioLabel })}
+                    onClick={() => {
+                      setServicio({
+                        id: t.id,
+                        nombre: t.nombre,
+                        precio: t.precio,
+                        precioLabel: t.precioLabel,
+                      });
+                      setPagoUrl(null);
+                      setPagoEstado("idle");
+                    }}
                     className={`p-4 rounded-2xl border-2 text-left transition-all ${
                       servicio?.id === t.id
                         ? "border-ochre bg-ochre/10"
@@ -178,23 +198,46 @@ export default function SepararCupo() {
                   <motion.div
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
-                    className="bg-ochre/10 border border-ochre/30 rounded-2xl p-4"
+                    className="bg-ochre/10 border border-ochre/30 rounded-2xl p-5"
                   >
                     <p className="font-semibold text-forest">
                       ¡Solicitud recibida! ✨
                     </p>
                     <p className="text-sm text-ink/70 mt-1">
-                      Te contactamos en menos de 24h para confirmar tu cupo.
+                      Tu cupo quedó reservado. Te contactamos en menos de 24h
+                      para confirmar.
                     </p>
-                    {pagoUrl && (
-                      <a
-                        href={pagoUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="mt-3 inline-block bg-forest text-cream px-6 py-3 rounded-full font-semibold hover:bg-forest-light transition-colors"
-                      >
-                        Pagar seña ahora →
-                      </a>
+
+                    {/* Botón de pago — siempre interactivo */}
+                    {servicio?.precio && (
+                      <div className="mt-4">
+                        <button
+                          type="button"
+                          onClick={handlePagar}
+                          disabled={pagoEstado === "cargando"}
+                          className="w-full bg-forest text-cream py-3.5 rounded-full font-semibold hover:bg-forest-light transition-colors disabled:opacity-50"
+                        >
+                          {pagoEstado === "cargando"
+                            ? "Preparando pago…"
+                            : `Pagar seña · ${formatCOP(servicio.precio * personas)}`}
+                        </button>
+                        <p className="text-xs text-ink/50 mt-2 text-center">
+                          Seña para asegurar tu cupo · Pago seguro con
+                          MercadoPago
+                        </p>
+
+                        {pagoEstado === "proximo" && (
+                          <motion.p
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            className="mt-3 text-sm text-ochre bg-ochre/10 border border-ochre/30 rounded-xl p-3 text-center"
+                          >
+                            El pago en línea se activa muy pronto. Tu cupo ya
+                            quedó reservado — te contactamos para coordinar la
+                            seña. 💛
+                          </motion.p>
+                        )}
+                      </div>
                     )}
                   </motion.div>
                 )}
