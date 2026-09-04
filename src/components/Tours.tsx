@@ -42,7 +42,7 @@ export default function Tours() {
 
                 {/* Imagen */}
                 <div className="relative h-56 bg-forest overflow-hidden">
-                  {t.imagen && t.id !== "umbral" ? (
+                  {t.imagen ? (
                     <Image
                       src={t.imagen}
                       alt={t.nombre}
