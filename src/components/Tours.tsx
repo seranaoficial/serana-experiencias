@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { tours, formatCOP } from "@/data/servicios";
 import Reveal from "./Reveal";
@@ -39,11 +40,21 @@ export default function Tours() {
                   </span>
                 )}
 
-                {/* Imagen placeholder */}
+                {/* Imagen */}
                 <div className="relative h-56 bg-forest overflow-hidden">
-                  <div className="absolute inset-0 flex items-center justify-center text-6xl">
-                    {t.emoji}
-                  </div>
+                  {t.imagen && t.id === "cerro-tusa" ? (
+                    <Image
+                      src={t.imagen}
+                      alt={t.nombre}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                      className="object-cover"
+                    />
+                  ) : (
+                    <div className="absolute inset-0 flex items-center justify-center text-6xl">
+                      {t.emoji}
+                    </div>
+                  )}
                   <div className="absolute inset-0 bg-gradient-to-t from-forest/80 to-transparent" />
                   <div className="absolute bottom-4 left-4 text-cream">
                     <p className="text-xs uppercase tracking-widest opacity-80">
