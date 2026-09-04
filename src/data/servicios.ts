@@ -54,9 +54,9 @@ export const tours: Servicio[] = [
     tagline: "Inmersión en hielo",
     descripcion:
       "Espacio de bienestar y conexión con herramientas de respiración, presencia, gestión emocional y resiliencia. Fortalece la tranquilidad, la confianza y la disposición positiva para la vida personal y laboral.",
-    precio: null,
+    precio: 199000,
     precioPareja: null,
-    precioLabel: "Cotizar",
+    precioLabel: "$199.000 / cupo",
     grupoMin: "Mínimo 15 · hasta 30 personas",
     duracion: "2 a 3 horas",
     lugar: "Poblado · Copacabana, Antioquia",
