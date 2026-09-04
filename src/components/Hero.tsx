@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Hero3D from "./Hero3D";
 
 export default function Hero() {
   return (
@@ -9,10 +8,20 @@ export default function Hero() {
       id="top"
       className="relative min-h-screen flex items-center justify-center overflow-hidden bg-forest"
     >
-      <Hero3D />
+      {/* Video de fondo */}
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        poster="/images/cerro-tusa.jpg"
+        className="absolute inset-0 w-full h-full object-cover"
+      >
+        <source src="/videos/hero-aerial.mp4" type="video/mp4" />
+      </video>
 
       {/* Overlay de gradiente para legibilidad */}
-      <div className="absolute inset-0 bg-gradient-to-b from-forest/60 via-forest/30 to-forest/80" />
+      <div className="absolute inset-0 bg-gradient-to-b from-forest/70 via-forest/40 to-forest/90" />
 
       <div className="relative z-10 max-w-4xl mx-auto px-6 text-center text-cream">
         <motion.p
